@@ -3,6 +3,8 @@
 ## Project setup
 
 ```javascript
+// latest stable version of vue if itsnot installed yet
+npm install vue
 npm install
 ```
 
