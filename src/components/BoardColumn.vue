@@ -1,16 +1,21 @@
 <template>
-  <v-card class="col-lg-3 m-2" @click="activateColumn(column.id)">
-    <v-card-title
-      :class="{ success: column.name === 'Done', info: column.name === 'Todo' }"
-      v-text="column.name"
-    ></v-card-title>
-    <Task
-      v-for="task in column.tasks"
-      :task="task"
-      :key="task.id"
-      :columnId="column.id"
-    />
-  </v-card>
+  <v-tooltip bottom>
+    <template v-slot:activator="{ on }"> 
+      <v-card class="col-lg-3 col-md-6 m-2 board-column" v-on="on" @click="activateColumn(column.id)">
+      <v-card-title
+        :class="{  success: column.name === 'Done', info: column.name === 'InProgress', error: column.name === 'Todo' }"
+        v-text="column.name"
+      ></v-card-title>
+      <Task
+        v-for="task in column.tasks"
+        :task="task"
+        :key="task.id"
+        :columnId="column.id"
+      />
+      </v-card>
+    </template>
+    Click to activate column to add a task to
+  </v-tooltip>
 </template>
 
 <script>
@@ -35,7 +40,7 @@ export default {
 </script>
 
 <style>
- .digital {
-   color: blue;
- }
+  .board-column {
+    margin-bottom: 2rem;
+  }
 </style>

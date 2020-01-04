@@ -1,14 +1,11 @@
 <template>
-  <div>
-    <h2>Kanban board</h2>
-    <v-card class="row m-2">
+  <div class="row m-4">
       <BoardColumn
         v-for="column in taskStates"
         :key="column.id"
         :column="column"
         v-on:columnClicked="setActiveColumn($event)"
       />
-    </v-card>
   </div>
 </template>
 
