@@ -7,20 +7,20 @@
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="AgileBoard Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src=""
           transition="scale-transition"
           width="40"
         />
 
         <v-img
-          alt="Vuetify Name"
+          alt="Agileboard Name"
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          src=""
           width="100"
         />
       </div>
@@ -38,23 +38,22 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <AgileBoard/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import AgileBoard from './views/AgileBoard';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    AgileBoard,
   },
 
   data: () => ({
-    //
   }),
 };
 </script>
