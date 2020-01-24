@@ -3,7 +3,7 @@
     <template v-slot:activator="{ on }"> 
       <v-card class="col-lg-3 col-md-6 m-2 board-column" v-on="on" @click="activateColumn(column.id)">
       <v-card-title
-        :class="{  success: column.name === 'Done', info: column.name === 'InProgress', error: column.name === 'Todo' }"
+        :class="{  success: column.name === 'Done', warning: column.name === 'Testing', info: column.name === 'InProgress', error: column.name === 'Todo' }"
         v-text="column.name"
       ></v-card-title>
       <Task
